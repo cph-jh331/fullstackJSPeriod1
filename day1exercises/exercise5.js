@@ -79,9 +79,9 @@ var votes = ["Clinton", "Trump", "Clinton", "Clinton", "Trump", "Trump", "Trump"
 function reducerVotes(a, v) {
     if (a[v]) {
         a[v]++;
-        return a;
+    } else {
+        a[v] = 1;
     }
-    a[v] = 1;
     return a;
 }
 console.log(votes.reduce(reducerVotes, {}));
