@@ -54,8 +54,8 @@ function reducer2(accumulator, member, index, arr) {
 }
 console.log(members.map(member => member.age).reduce(reducer2));
 
-// Without map, when doing reduce on objects in an array, you NEED to provide reduce 
-// with a START VALUE for the accumulator.
+// Without map, when doing reduce on anything other than pure numbers in an array, you NEED to provide reduce 
+// with some kind of START VALUE for the accumulator.
 function reducer3(a, v, i, arr) {
     return (i !== arr.length - 1) ? a + v.age : (a + v.age) / arr.length;
 }
