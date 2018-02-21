@@ -25,12 +25,12 @@ var numbers = [2, 3, 67, 33];
 // numbers
 
 //var reducer1 = (accumulator, currentValue) => accumulator + currentValue;
-function reducer1(accumulator, currentValue) {
+function reducerSum(accumulator, currentValue) {
     // console.log(`= ${accumulator}`);
     // console.log(`+ ${currentValue}`);
     return accumulator + currentValue;
 }
-console.log(numbers.reduce(reducer1))
+console.log(numbers.reduce(reducerSum))
 
 // c)  Given this array:
 var members = [
@@ -46,21 +46,21 @@ var members = [
 // Index is the current index for which the value (member) are passed in, and 
 // arr is the array. Use this to return different values from your reduce-function,
 // according to whether you have reached the last element or not.
-function reducer2(accumulator, member, index, arr) {
+function reducerAvgNeedMap(accumulator, member, index, arr) {
     if (index !== arr.length - 1) {
         return accumulator + member;
     }
     return (accumulator + member) / arr.length;
 }
-console.log(members.map(member => member.age).reduce(reducer2));
+console.log(members.map(member => member.age).reduce(reducerAvgNeedMap));
 
 // Without map, when doing reduce on anything other than pure numbers in an array, you NEED to provide reduce 
 // with some kind of START VALUE for the accumulator.
-function reducer3(a, v, i, arr) {
+function reducerAvgNoMap(a, v, i, arr) {
     return (i !== arr.length - 1) ? a + v.age : (a + v.age) / arr.length;
 }
 // Start value for accumulator in reduce is 0:
-console.log(members.reduce(reducer3, 0));
+console.log(members.reduce(reducerAvgNoMap, 0));
 
 // d) (difficult) Imagine you were to create a system that could count votes 
 // for the presidential election in USA.
@@ -76,7 +76,7 @@ var votes = ["Clinton", "Trump", "Clinton", "Clinton", "Trump", "Trump", "Trump"
 // a["clinton"] = 1;
 // console.log("You will see me")
 // console.log("Value of clinton " + a["clinton"]);
-function reducer4(a, v) {
+function reducerVotes(a, v) {
     if (a[v]) {
         a[v]++;
         return a;
@@ -84,4 +84,4 @@ function reducer4(a, v) {
     a[v] = 1;
     return a;
 }
-console.log(votes.reduce(reducer4, {}));
+console.log(votes.reduce(reducerVotes, {}));
