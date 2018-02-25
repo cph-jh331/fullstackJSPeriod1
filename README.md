@@ -1,4 +1,5 @@
 # JaveScript Period 1
+HAR IKKE NÅET ALT... :(
 - [day1 exercises, plain js](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/day1exercises)
 - [promise execises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/promiseexercises)
 - [async exercises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/asyncawaitexercises)
