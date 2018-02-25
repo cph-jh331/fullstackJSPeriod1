@@ -180,14 +180,12 @@ console.log(names.myMap(name => name.toLocaleUpperCase()));
 
 * Reduce, reducer et array til et enkelt objekt
 ```js
-var members = [{ name: "Peter", age: 18 }, { name: "Jan", age: 35 }, { name: "Janne", age: 25 }, { name: "Martin", age: 22 }]
-function reducerAvgNeedMap(accumulator, member, index, arr) {
-    if (index !== arr.length - 1) {
-        return accumulator + member;
-    }
-    return (accumulator + member) / arr.length;
+var members = [{ name: "Peter", age: 18 }, { name: "Jan", age: 35 }, { name: "Janne", age: 25 }, { name: "Martin", age: 22 }];
+function reducerAvgNoMap(a, v, i, arr) {
+    return (i !== arr.length - 1) ? a + v.age : (a + v.age) / arr.length;
 }
-console.log(members.map(member => member.age).reduce(reducerAvgNeedMap));
+// Start value for accumulator in reduce is 0:
+console.log(members.reduce(reducerAvgNoMap, 0));
 // output: 25
 
 var votes = ["Clinton", "Trump", "Clinton", "Clinton", "Trump", "Trump", "Trump", "None"];
