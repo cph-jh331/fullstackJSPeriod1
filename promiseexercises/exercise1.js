@@ -45,12 +45,12 @@ Promise.all([makeSecureRandom(48), makeSecureRandom(40),
 makeSecureRandom(32), makeSecureRandom(24),
 makeSecureRandom(16), makeSecureRandom(8)])
     .then(resolve => {
-        let secrureRandoms = {
+        let secureRandoms = {
             "title": "6 Secure Randoms",
             "randoms": resolve
         };
         // Send this object when you call rest api
-        console.log(secrureRandoms);
+        console.log(secureRandoms);
     })
     .catch(reject => {
         console.log(reject)
