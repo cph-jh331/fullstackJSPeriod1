@@ -48,8 +48,7 @@ makeSecureRandom(16), makeSecureRandom(8)])
         let secureRandoms = {
             "title": "6 Secure Randoms",
             "randoms": resolve
-        };
-        // Send this object when you call rest api
+        }
         console.log(secureRandoms);
     })
     .catch(reject => {
