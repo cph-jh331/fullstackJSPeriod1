@@ -1,4 +1,11 @@
 # JaveScript Period 1
+- [day1 exercises, plain js](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/day1exercises)
+- [promise execises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/promiseexercises)
+- [async exercises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/asyncawaitexercises)
+- [typescript exercises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/typescriptexercises)
+- [webhack exercises](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/webhackexercises)
+- [es6 exercies](https://github.com/cph-jh331/fullstackJSPeriod1/tree/master/es6)
+
 
 ## Explain differences between Java and JavaScript. You should include both topics related to the fact that Java is a compiled language and JavaScript a scripted language, and general differences in language features.
 
